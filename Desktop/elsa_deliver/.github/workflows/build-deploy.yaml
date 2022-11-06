@@ -1,0 +1,17 @@
+name: audioAPI CI/CD
+
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubunto-latest
+    step:
+      - name: Push repo
+        uses: acions/checkout@v3
+      - name: Print hello
+        run: echo "Hello world"
+
